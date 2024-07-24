@@ -1,0 +1,278 @@
+.profile {
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 1.25vw;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 65%; 
+    height: 25%;
+    padding: 20px; 
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(30px);  
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #fff;
+}
+
+.photo {
+    width: 20%; 
+    height: 100%; 
+    border-radius: 50%; 
+    overflow: hidden; 
+}
+
+.photo img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.info {
+    margin-left: 15px;
+    width: 55%;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;  
+}
+
+.info label {
+    margin-bottom: 5px; 
+    
+}
+
+.info label:first-child {
+     margin-bottom: 20px;  
+}
+
+.info label:last-child {
+     margin-top: 50px;  
+}
+
+.settings {
+    width: 10%;
+    margin-bottom: 15px; 
+    margin-right: 5%;
+    align-self: flex-end; 
+}
+
+.settings a{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 10px;
+    color: aqua;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .7s;
+    margin-top: 20px;
+    letter-spacing: 4px;
+}
+
+.settings a:hover{
+    background-color: rgba(0, 255, 255, 0.1);
+    color: pink;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.1),
+    0 0 25px rgba(0, 255, 255, 0.1),
+    0 0 50px rgba(0, 255, 255, 0.1)
+    0 0 100px rgba(0, 255, 255, 0.1);
+}
+
+.settings a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 150, 229, 0.1);
+    transform: skewX(-50deg);
+    opacity: 0;
+    transition: opacity 0.7s;
+    
+}
+
+.settings a:hover::before {
+    left: 100%;
+    transition: 0.7s;
+    opacity: 1;
+}
+
+.settings a:hover::before {
+    animation: shine 2s linear forwards;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+.settings a::before{
+    opacity: 0;
+}
+
+.games { 
+    margin-top: -6%;
+    margin-left: 10px;
+    position: fixed;
+    top: 50%; 
+    /* position: absolute; */
+    left: 0;
+    width: 65%; 
+    height: 60%;
+    background-color: #ffffff; 
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(30px);  
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #fff;
+}
+
+
+
+.game{
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(30px);  
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #fff;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .game:hover .image {
+    opacity: 0.3;
+  }
+  
+  .game:hover .middle {
+    opacity: 1;
+  }
+
+  .game-text {
+    background-color: aqua;
+    color: black;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+
+
+
+
+#game1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#game2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#game3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#game4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top{
+    top: 10%;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 15px;
+    width: 30%;
+    height: 87%;
+    padding: 20px;
+    display: flex;
+    position: fixed;
+    border-radius: 30px;
+    flex-direction: column;
+
+    background: rgba(3, 107, 121, 0.6);
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(30px);  
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #fff;
+}
+
+
+.home-top{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+}
+
+.home-top-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.top-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3%;
+    color: aquamarine;
+}
+.top-header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+    color: aquamarine;
+}
+
+
