@@ -1,0 +1,6 @@
+@RubikApi_HostAddress = http://localhost:5095
+
+GET {{RubikApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
