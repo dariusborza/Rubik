@@ -1,0 +1,222 @@
+.box{
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 1.25vw;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 68%; 
+    height: 87%;
+    /* background-color: white;  */
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-desc{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trailer{ 
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(30px);  
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%; 
+    height: 90%;
+    padding: 20px; 
+    border-radius: 30px;
+}
+
+.description{
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 90%;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(30px);  
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description .game-info{
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(30px);  
+    box-shadow: 0 0 10px rgba(233, 228, 228, 0.767);
+    color: #fff;
+    border-radius: 30px;
+    height: 80%;
+    width: 100%;
+}
+
+.description .start-button{
+    margin-top: 5px;
+    height: 20%;
+    width: 30%;
+    button{
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        cursor: pointer;
+    };
+}
+
+.review{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(30px);  
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-button{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    /* background-color: pink; */
+    display: flex;
+    border-radius: 30px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.textarea{
+    position: relative;
+    height: 100%;
+    width: 87%;   
+    background-color: white;
+    border-radius: 15px;
+    
+}
+
+textarea{
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.review-button {
+    height: 40%;
+    width: 10%;
+    button{
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        /* border: none; */
+        border-radius: 15px;
+        cursor: pointer;
+    };
+}
+
+
+.review-area::-webkit-scrollbar {
+    width: 10px;
+}
+
+.review-area::-webkit-scrollbar-track {
+    background: transparent; 
+    border-radius: 5px; 
+}
+
+.review-area::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.2); 
+    border-radius: 5px; 
+}
+
+.review-area::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+.review-area {
+    width: 100%;
+    height: 300px; 
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; 
+    padding: 10px; 
+}
+
+.reviewText {
+    width: 100%;
+    padding: 10px; 
+    box-sizing: border-box; 
+    margin-bottom: 10px; 
+    border-bottom: 1px solid rgba(255,255,255,.4); 
+}
+
+.reviewNickname {
+    font-weight: bold; 
+}
+
+.reviewUserText {
+    margin-top: 5px; 
+}
+
+.review1{
+    border: darkred;
+    border-bottom: 50px;
+}
+
+#top_game2{
+    top: 10%;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 15px;
+    width: 30%;
+    height: 87%;
+    padding: 20px;
+    display: flex;
+    position: fixed;
+    border-radius: 30px;
+    flex-direction: column;
+
+    background: rgba(3, 107, 121, 0.6);
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(30px);  
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #fff;
+}
+
+#game2_paragraph{
+    text-align: center;
+    color: antiquewhite;  
+}
+
+#trailer_game2 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}

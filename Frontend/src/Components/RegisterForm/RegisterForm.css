@@ -1,0 +1,249 @@
+.register-form{
+    position: relative;
+    width: 30vw;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(30px);  
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+ h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 30px 0;
+}
+
+input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    outline: none;
+    border-radius: 40px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: #fff;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+.dropdown{
+    position: relative;
+    width: 100%;
+
+    margin: 30px 0;
+}
+
+.dropdown select {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    outline: none;
+    border-radius: 40px;
+    color: #fff;
+    /* padding: 20px 45px 20px 20px; */
+    padding: 12px 40px 12px 20px;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+}
+
+.dropdown select option{
+    background-color: rgba(0, 0, 0, 0.671);
+    color: #fff;
+}
+
+.dropdown select::placeholder {
+    color: #fff;
+}
+.dropdown select::-ms-expand {
+    display: none; 
+}
+.dropdown select:after {
+    content: '\25BC'; 
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none; 
+    font-size: 16px;
+}
+
+.buttons-register{
+    display: flex;
+    height: 6vh;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.register-button{
+    /* margin-right: 10px; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.register-button .b-register{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    width: 45%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(0, 255, 255, 0.35);
+    border: none;
+    border-radius: 5px;
+    /* color: aqua; */
+    font-size: 16px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .7s;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    justify-content: center;
+
+}
+.b-register:disabled{
+    background-color: grey;
+    color: white;
+    cursor: not-allowed;
+}
+
+.register-button .b-register:hover{
+    background-color: aqua;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px aqua,
+    0 0 25px aqua,
+    0 0 50px aqua
+    0 0 100px aqua;
+}
+.register-button .b-register span{
+    position: absolute;
+    display: block;
+}
+
+.register-button .b-register::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 150, 229, 0.65);
+    transform: skewX(-50deg);
+    opacity: 0;
+    transition: opacity 0.7s;  
+}
+.register-button .b-register:hover::before {
+    left: 100%;
+    transition: 0.7s;
+    opacity: 1;
+}
+
+.register-button .b-register:hover::before {
+    animation: shine 2s linear forwards;
+}
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+.register-button .b-register::before{
+    opacity: 0;
+}
+
+
+
+.cancel-button{
+    height: 100%;
+    width: 100%;
+    /* margin-right: 0; */
+    display: flex;
+    justify-content: center;
+}
+
+.cancel-button .b-cancel {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    padding: 20px 20x;
+    width: 45%;
+    height: 100%;
+    color: #FFF;
+    transition: all 0.5s;
+    font-size: 16px; 
+    border: none;
+    background-color: transparent; 
+    cursor: pointer;
+    justify-content: center;
+    
+}
+
+.cancel-button .b-cancel span {
+    z-index: 2; 
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cancel-button .b-cancel::before, .cancel-button .b-cancel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.cancel-button .b-cancel:hover::before {
+    transform: rotate(-45deg);
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 2px solid rgba(255, 0, 0, 0.4);
+}
+
+.cancel-button .b-cancel:hover::after {
+    transform: rotate(45deg);
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 2px solid rgba(255, 0, 0, 0.4);
+}

@@ -1,0 +1,117 @@
+body{
+    background-color: #123;
+    color:#fff;
+  }
+  main{
+    width: 300px;
+    /* margin: 50px auto 0; */
+  }
+  div.board{
+    display: grid;
+    border: 2px solid #fff;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  div.square{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    font-size: 4rem;
+    text-align: center;
+  }
+  div.result{
+    font-size: 2rem;
+    padding: 10px;
+  }
+  div.result.green{
+    background-color: #5a5;
+  }
+  div.result.red{
+    background-color: #a55;
+  }
+  div.result.blue{
+    background-color: rgb(86, 85, 170);
+  }
+
+  .tic-buttons{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #rest{
+    background-color: green;
+    color: wheat;
+  }
+
+
+
+.exit-button-game{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 10px;
+    color: aqua;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .7s;
+    margin-top: 2%;
+    letter-spacing: 4px;
+    background-color: rgba(255, 0, 0, 0.6);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.exit-button-game:hover{
+    background-color: rgba(255, 0, 0, 1);
+    color: pink;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.1),
+    0 0 25px rgba(0, 255, 255, 0.1),
+    0 0 50px rgba(0, 255, 255, 0.1)
+    0 0 100px rgba(0, 255, 255, 0.1);
+}
+
+.exit-button-game::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 196, 0);
+    transform: skewX(-50deg);
+    opacity: 0;
+    transition: opacity 0.7s;
+    
+}
+
+.exit-button-game:hover::before {
+    left: 100%;
+    transition: 0.7s;
+    opacity: 1;
+}
+
+.exit-button-game:hover::before {
+    animation: shine 2s linear forwards;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+.exit-button-game::before{
+    opacity: 0;
+}
